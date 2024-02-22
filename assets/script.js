@@ -30,8 +30,7 @@ function upSlide() { // Définit la function upSlide
 	const slide = slides[selectedSlide] // Déclare la variable Slide et Récupère les informations de la diapo correspondant à l'index selectedSlide.
 	banner.src = "./assets/images/slideshow/" + slide.image // Applique l'image correspondante a la source de la banniere.
 	tagLine.innerHTML = slide.tagLine // Applique la tagline correspondante au contenue du paragraphe.
-	const dots = divDots.querySelectorAll('.dot'); // Sélectionne tous les éléments avec la classe CSS ".dot" à l'intérieur de la div "divDots".
-	slide.length = 
+	const dots = divDots.querySelectorAll('.dot'); // Sélectionne tous les éléments avec la classe CSS ".dot" à l'intérieur de la div "divDots". 
 	dots.forEach((dot, i) => { // Applique une boucle avec .dot et l'index i.
 		if (i === selectedSlide) { // Si l'index i correspond à la diapo selectionné
 			dot.classList.add('dot_selected'); // On ajoute la class css .dot_selected a l'element dot.
