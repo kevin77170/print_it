@@ -60,12 +60,13 @@ arrowright.addEventListener("click", function () {		// Je déclare un evenement 
 	upSlide()	// J'appelle la fonction "upSlide()" pour mettre à jour l'affichage de la diapositive.
 });
 
+// Boucle qui permet de créer des bullet point (dots) dynamiques pour des diapositives. 
 
 for (let i = 0; i < slides.length; i++) {  // Boucle tant que i < longueur de slides, et incrémentation
 	const createDivDot = document.createElement("div"); // Creation de la div pour les .dot
-	createDivDot.className = "dot dot"+i; // Classe pour divDot
-	if ( i === 0 ){
-		createDivDot.className = "dot " + "dot"+i + " dot_selected"; // Si i=0, alors ajout de la class .dot_selected
+	createDivDot.className = "dot dot"+i; // Attribution de la classe "dot" suivie de la valeur de i à l'élément divDot
+	if ( i === 0 ){	// Condition pour vérifier si i est égal à 0
+		createDivDot.className = "dot " + "dot"+i + " dot_selected"; // Si i est égal à 0, ajout de la classe "dot_selected" à l'élément divDot
 	} 
 	divDots.append(createDivDot); // ajout de divDot dans conteneur divDots
 }
